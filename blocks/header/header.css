@@ -1,0 +1,11 @@
+.header {
+    max-width: 880px;
+    display: flex;
+    padding: 45px 200px 0px;
+    position: relative;
+}
+@media screen and (max-width: 767px) {
+    .header {
+        padding: 28px 0px 0px;
+    }
+}
