@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Елена Василенко">
+    <meta name="description" content="Интерактивная страница с функцией добавления и удаления фотографий, а также возможностью ставить лайки.">
+    <link rel="stylesheet" href="./pages/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./images/logo.ico.ico" type="image/x-icon"> 
+    <title>Место</title>
+</head>
+<body class="page">
+    <div class="page__contener">
+        <header class="header">
+            <img class="header__logo" src="./images/logo.svg" alt="Логотип Место">
+            <hr class="header__line">
+        </header>
+        <main>
+            <section class="profile">
+                <img class="profile__avatar" src="./images/Cousteau.jpg" alt="Аватар">
+                <div class="profile__info">
+                    <h1 class="profile__name">Жак-Ив Кусто</h1>
+                    <p class="profile__status">Исследователь океана</p>
+                    <button class="profile__editButton" type="button"></button>
+                </div>
+                <button class="profile__addButton" type="button"></button>
+            </section>
+            <section class="elements">
+                <ul class="element">
+                    <li class="element__card">
+                        <img class="element__photo" src="./images/Karachaevsk.jpg" alt="Карачаевск достопримечательность">
+                        <div class="element__nameGroup">
+                            <h2 class="element__title">Карачаевск</h2>
+                            <button class="element__heart"></button>
+                        </div>
+                    </li>
+                    <li class="element__card">
+                        <img class="element__photo" src="./images/Dombay.jpg" alt="Горы Домбай">
+                        <div class="element__nameGroup">
+                            <h2 class="element__title">Домбай</h2>
+                            <button class="element__heart"></button>
+                        </div>
+                    </li>
+                    <li class="element__card">
+                        <img class="element__photo" src="./images/Albrus.jpg" alt="Гора Эльбрус">
+                        <div class="element__nameGroup">
+                            <h2 class="element__title">Гора Эльбрус</h2>
+                            <button class="element__heart"></button>
+                        </div>
+                    </li>
+                    <li class="element__card">
+                        <img class="element__photo" src="./images/KBR.jpg" alt="Озеро Гижгит">
+                        <div class="element__nameGroup">
+                            <h2 class="element__title">Кабардино-Балкария</h2>
+                            <button class="element__heart"></button>
+                        </div>
+                    </li>
+                    <li class="element__card">
+                        <img class="element__photo" src="./images/Dagestan.jpg" alt="Сулакский каньон">
+                        <div class="element__nameGroup">
+                            <h2 class="element__title">Дагестан</h2>
+                            <button class="element__heart"></button>
+                        </div>
+                    </li>
+                    <li class="element__card">
+                        <img class="element__photo" src="./images/Baikal.jpg" alt="Байкал">
+                        <div class="element__nameGroup">
+                            <h2 class="element__title">Байкал</h2>
+                            <button class="element__heart"></button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <footer class="footer">
+            <p class="footer__copyright" lang="en">© 2023 Mesto Russia</p>
+        </footer>
+        <section class="popup">
+            <div class="popup__contener">
+                <button class="popup__close"></button>
+                <h2 class="popup__title">Редактировать профиль</h2>
+                <form class="popup__content">
+                    <input class="popup__name" name="name" type="text" placeholder="Имя пользователя" required>
+                    <input class="popup__status" name="status" type="text" placeholder="О себе" required>
+                </form>
+                <button class="popup__saveButton"></button>
+            </div>
+        </section>
+    </div>
+    <script src="./scripts/index.js"></script>
+</body>
+</html>
