@@ -28,6 +28,5 @@ function handleFormProfileSubmit(evt) {
     profileName.textContent = popupName.value;
     profileStatus.textContent = popupStatus.value;
     popupClosePush ();
-
 }
 formProfile.addEventListener('submit', handleFormProfileSubmit);
