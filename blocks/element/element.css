@@ -1,21 +1,9 @@
 .element {
-    padding: 51px 200px 0px;
-    list-style-type: none;
-    margin: 0;
-    display: grid;
-    grid-template-columns:repeat(3, 1fr);
-    grid-template-rows: repeat(auto-fill, 361px);
-    gap: 20px 17px;
-}
-@media screen and (max-width: 1024px) {
-    .element {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 36px 19px 0px;
-        justify-items: center;
-    }
-}
-@media screen and (max-width: 767px) {
-    .element {
-        grid-template-columns: 1fr;
-    }
+    border-radius: 10px;
+    max-width: 282px;
+    width: 100%;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }

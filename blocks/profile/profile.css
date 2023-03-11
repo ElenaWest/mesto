@@ -1,5 +1,5 @@
 .profile {
-    padding: 40px 200px 0px;
+    padding-top: 40px;
     display: grid;
     grid-template-columns: 120px 366px 1fr 150px;
     grid-template-areas: 
@@ -7,9 +7,8 @@
 }
 @media screen and (max-width: 1024px) {
     .profile {
-        padding: 42px 19px 0px;
+        padding-top: 42px;
         grid-template-columns: 1fr;
-        grid-template-rows: 120px 22.25px 1fr 36px 50px;
         grid-template-areas:
         'avatar'
         '.'

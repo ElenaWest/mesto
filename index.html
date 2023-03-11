@@ -11,81 +11,80 @@
 </head>
 <body class="page">
     <div class="page__contener">
-        <header class="header">
+        <header class="header page__sizing">
             <img class="header__logo" src="./images/logo.svg" alt="Логотип Место">
-            <hr class="header__line">
         </header>
-        <main>
-            <section class="profile">
+        <main class="main">
+            <section class="profile page__sizing">
                 <img class="profile__avatar" src="./images/Cousteau.jpg" alt="Аватар">
                 <div class="profile__info">
                     <h1 class="profile__name">Жак-Ив Кусто</h1>
                     <p class="profile__status">Исследователь океана</p>
-                    <button class="profile__editButton" type="button"></button>
+                    <button class="profile__edit-button" type="button" aria-label="Edit"></button>
                 </div>
-                <button class="profile__addButton" type="button"></button>
+                <button class="profile__add-button" type="button" aria-label="Add"></button>
             </section>
             <section class="elements">
-                <ul class="element">
-                    <li class="element__card">
+                <ul class="elements__list page__sizing">
+                    <li class="element">
                         <img class="element__photo" src="./images/Karachaevsk.jpg" alt="Карачаевск достопримечательность">
-                        <div class="element__nameGroup">
+                        <div class="element__name-group">
                             <h2 class="element__title">Карачаевск</h2>
-                            <button class="element__heart"></button>
+                            <button class="element__heart" type="button" aria-label="Like"></button>
                         </div>
                     </li>
-                    <li class="element__card">
+                    <li class="element">
                         <img class="element__photo" src="./images/Dombay.jpg" alt="Горы Домбай">
-                        <div class="element__nameGroup">
+                        <div class="element__name-group">
                             <h2 class="element__title">Домбай</h2>
-                            <button class="element__heart"></button>
+                            <button class="element__heart" type="button" aria-label="Like"></button>
                         </div>
                     </li>
-                    <li class="element__card">
+                    <li class="element">
                         <img class="element__photo" src="./images/Albrus.jpg" alt="Гора Эльбрус">
-                        <div class="element__nameGroup">
+                        <div class="element__name-group">
                             <h2 class="element__title">Гора Эльбрус</h2>
-                            <button class="element__heart"></button>
+                            <button class="element__heart" type="button" aria-label="Like"></button>
                         </div>
                     </li>
-                    <li class="element__card">
+                    <li class="element">
                         <img class="element__photo" src="./images/KBR.jpg" alt="Озеро Гижгит">
-                        <div class="element__nameGroup">
+                        <div class="element__name-group">
                             <h2 class="element__title">Кабардино-Балкария</h2>
-                            <button class="element__heart"></button>
+                            <button class="element__heart" type="button" aria-label="Like"></button>
                         </div>
                     </li>
-                    <li class="element__card">
+                    <li class="element">
                         <img class="element__photo" src="./images/Dagestan.jpg" alt="Сулакский каньон">
-                        <div class="element__nameGroup">
+                        <div class="element__name-group">
                             <h2 class="element__title">Дагестан</h2>
-                            <button class="element__heart"></button>
+                            <button class="element__heart" type="button" aria-label="Like"></button>
                         </div>
                     </li>
-                    <li class="element__card">
+                    <li class="element">
                         <img class="element__photo" src="./images/Baikal.jpg" alt="Байкал">
-                        <div class="element__nameGroup">
+                        <div class="element__name-group">
                             <h2 class="element__title">Байкал</h2>
-                            <button class="element__heart"></button>
+                            <button class="element__heart" type="button" aria-label="Like"></button>
                         </div>
                     </li>
                 </ul>
             </section>
         </main>
-        <footer class="footer">
+        <footer class="footer page__sizing">
             <p class="footer__copyright" lang="en">© 2023 Mesto Russia</p>
         </footer>
-        <section class="popup">
+        <div class="popup">
             <div class="popup__contener">
-                <button class="popup__close"></button>
+                <button class="popup__close" type="button" aria-label="Close"></button>
                 <h2 class="popup__title">Редактировать профиль</h2>
-                <form class="popup__content">
-                    <input class="popup__name" name="name" type="text" placeholder="Имя пользователя" required>
-                    <input class="popup__status" name="status" type="text" placeholder="О себе" required>
+                <form class="popup__content" name="content">
+                    <input class="popup__input popup__input_name" name="name" type="text" placeholder="Имя пользователя" required>
+                    <input class="popup__input popup__input_status" name="status" type="text" placeholder="О себе" required>
+                    <button class="popup__save-button" type='submit' aria-label="Save"></button>
                 </form>
-                <button class="popup__saveButton"></button>
             </div>
-        </section>
+        </div>
     </div>
     <script src="./scripts/index.js"></script>
 </body>
