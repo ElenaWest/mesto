@@ -1,10 +1,15 @@
 .popup__save-button {
     margin: 48px 36px 37px;
-    background-image: url(../../../images/SubmitButton.svg);
+    color: #FFFFFF;
+    background-color: #000000;
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
     max-width: 358px;
     height: 50px;
-    border-radius: 2px;
-    border: 0;
+    border-radius: 2px;  
     padding: 0;
     opacity: 1;
     transition: opacity linear 0.2s;
@@ -18,6 +23,7 @@
         margin: 45px 22px 25px;
         max-width: 338px;
         height: 46px;
-        background-image: url(../../../images/SubmitButtonM.svg);
+        font-size: 14px;
+        line-height: 17px;
     }
 }
