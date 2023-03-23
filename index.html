@@ -25,66 +25,53 @@
                 <button class="profile__add-button" type="button" aria-label="Добавить"></button>
             </section>
             <section class="elements">
-                <ul class="elements__list page__sizing">
-                    <li class="element">
-                        <img class="element__photo" src="./images/Karachaevsk.jpg" alt="Карачаевск достопримечательность">
-                        <div class="element__name-group">
-                            <h2 class="element__title">Карачаевск</h2>
-                            <button class="element__heart" type="button" aria-label="Нравиться"></button>
-                        </div>
-                    </li>
-                    <li class="element">
-                        <img class="element__photo" src="./images/Dombay.jpg" alt="Горы Домбай">
-                        <div class="element__name-group">
-                            <h2 class="element__title">Домбай</h2>
-                            <button class="element__heart" type="button" aria-label="Нравиться"></button>
-                        </div>
-                    </li>
-                    <li class="element">
-                        <img class="element__photo" src="./images/Albrus.jpg" alt="Гора Эльбрус">
-                        <div class="element__name-group">
-                            <h2 class="element__title">Гора Эльбрус</h2>
-                            <button class="element__heart" type="button" aria-label="Нравиться"></button>
-                        </div>
-                    </li>
-                    <li class="element">
-                        <img class="element__photo" src="./images/KBR.jpg" alt="Озеро Гижгит">
-                        <div class="element__name-group">
-                            <h2 class="element__title">Кабардино-Балкария</h2>
-                            <button class="element__heart" type="button" aria-label="Нравиться"></button>
-                        </div>
-                    </li>
-                    <li class="element">
-                        <img class="element__photo" src="./images/Dagestan.jpg" alt="Сулакский каньон">
-                        <div class="element__name-group">
-                            <h2 class="element__title">Дагестан</h2>
-                            <button class="element__heart" type="button" aria-label="Нравиться"></button>
-                        </div>
-                    </li>
-                    <li class="element">
-                        <img class="element__photo" src="./images/Baikal.jpg" alt="Байкал">
-                        <div class="element__name-group">
-                            <h2 class="element__title">Байкал</h2>
-                            <button class="element__heart" type="button" aria-label="Нравиться"></button>
-                        </div>
-                    </li>
-                </ul>
+                <ul class="elements__list page__sizing"></ul>
             </section>
         </main>
         <footer class="footer page__sizing">
             <p class="footer__copyright" lang="en">© 2023 Mesto Russia</p>
         </footer>
-        <div class="popup">
+        <div class="popup popup_type_profile">
             <div class="popup__contener">
                 <button class="popup__close" type="button" aria-label="Закрыть"></button>
                 <h2 class="popup__title">Редактировать профиль</h2>
                 <form class="popup__content" name="content">
-                    <input class="popup__input popup__input_user_name" name="name" type="text" placeholder="Имя пользователя" required>
-                    <input class="popup__input popup__input_user_status" name="status" type="text" placeholder="О себе" required>
+                    <input class="popup__input popup__input_user_name" id="name" name="name" type="text" placeholder="Имя пользователя" required>
+                    <input class="popup__input popup__input_user_status" id="status" name="status" type="text" placeholder="О себе" required>
                     <button class="popup__save-button" type='submit' aria-label="Сохранить">Сохранить</button>
                 </form>
             </div>
         </div>
+        <div class="popup popup_type_picture"> 
+            <div class="popup__contener">
+                <button class="popup__close" type="button" aria-label="Закрыть"></button>
+                <h2 class="popup__title">Новое место</h2>
+                <form class="popup__content" name="content">
+                    <input class="popup__input popup__input_place_name" id="place" name="place-name" type="text" placeholder="Название" required>
+                    <input class="popup__input popup__input_picture_link" id="link" name="picture-link" type="text" placeholder="Ссылка на картинку" required>
+                    <button class="popup__save-button" type='submit' aria-label="Создать">Создать</button>
+                </form>
+            </div>
+        </div>
+        <div class="popup popup_type_image">
+            <div class="popup__contener popup__contener_type_image">
+                <button class="popup__close" type="button" aria-label="Закрыть"></button>
+                <figure class="popup__figure">
+                    <img class="popup__image" src="#" alt="Увеличенное изображение">
+                    <figcaption class="popup__figcaption"></figcaption>
+                </figure>
+            </div>
+        </div>
+        <template id="cards">
+            <li class="element">
+                <img class="element__photo" src="#" alt="Увеличенное изображение">
+                <button class="element__trash" type="button" aria-label="Удалить"></button>
+                <div class="element__name-group">
+                    <h2 class="element__title"></h2>
+                    <button class="element__heart" type="button" aria-label="Нравиться"></button>
+                </div>
+            </li>
+        </template>
     </div>
     <script src="./scripts/index.js"></script>
 </body>

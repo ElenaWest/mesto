@@ -15,6 +15,3 @@
     opacity: 0.5;
     cursor: pointer;
 }
-.element__heart:active {
-    background-image: url(../../../images/Unionheart.svg);
-}
