@@ -9,6 +9,7 @@
     overflow: hidden;
     margin: 0;
     grid-area: name;
+    min-height: 48px;
 }
 @media screen and (max-width: 1024px) {
     .profile__name {

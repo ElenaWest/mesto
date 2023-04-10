@@ -8,7 +8,8 @@
     background-color: transparent;
     grid-area: button;
     opacity: 1;
-    transition: opacity linear 0.2s; 
+    transition: opacity linear 0.2s;
+    outline: none;
 }
 .profile__edit-button:hover {
     opacity: 0.6;
