@@ -1,4 +1,4 @@
-.popup_type_error {
+.span_type_error {
     font-family: 'Inter', Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -11,7 +11,7 @@
     min-height: 12px;
 }
 @media screen and (max-width: 767px) {
-    .popup_type_error {
+    .span_type_error {
         margin-left: 22px;
         max-width: 238px;
     }

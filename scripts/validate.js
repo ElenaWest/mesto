@@ -3,7 +3,7 @@ const validationConfig = {
   inputSelector: '.popup__input',
   submitButtonSelector: '.popup__save-button',
   inactiveButtonClass: 'popup__save-button_disabled',
-  inputErrorClass: 'popup_type_error',
+  inputErrorClass: 'span_type_error',
   errorClass: 'popup__error_visible'
 };
 
