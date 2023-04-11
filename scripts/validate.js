@@ -7,20 +7,23 @@ const validationConfig = {
   errorClass: 'popup__error_visible'
 };
 
-const enableValidation = ({formSelector, inputSelector, submitButtonSelector, ...rest}) => {
+const enableValidation = ({formSelector, inputSelector, submitButtonSelector, inactiveButtonClass, ...rest}) => {
     const forms = Array.from(document.querySelectorAll(formSelector));
     forms.forEach((form) => {
       const inputList = form.querySelectorAll(inputSelector);
       const saveButton =form.querySelector(submitButtonSelector);
-      setEventListeners(inputList, saveButton, rest);
+      form.addEventListener('reset', () => {
+        disableButton(saveButton, inactiveButtonClass);
+      });
+      setEventListeners(inputList, saveButton, inactiveButtonClass, rest);
       })       
     }
 
-const setEventListeners = (inputList, saveButton, rest) => {
+const setEventListeners = (inputList, saveButton, inactiveButtonClass, rest) => {
   inputList.forEach((input) => {
     input.addEventListener('input', () => {
       checkInputValidity(input, rest.inputErrorClass, rest.errorClass);
-      toggleButton(inputList, saveButton, rest.inactiveButtonClass);
+      toggleButton(inputList, saveButton, inactiveButtonClass);
     })
   })
 }
