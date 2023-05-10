@@ -2,7 +2,7 @@ export default class Card {
     constructor(item, selectorTemplate, handlePreviewImage) {
       this._item = item;
       this._link = item.link;
-      this._name = item.name;
+      this._name = item.title;
       this._selectorTemplate = selectorTemplate;
       this._handlePreviewImage = handlePreviewImage;
     }
@@ -37,7 +37,7 @@ export default class Card {
       this._elementTrash = this._cloneElement.querySelector('.element__trash');
       this._elementTitle = this._cloneElement.querySelector('.element__title');
       this._elementPhoto.src = this._link;
-      this._elementPhoto.alt = this._name;
+      this._elementPhoto.alt = `Изображение ${this._name}`;
       this._elementTitle.textContent = this._name;
       this._setEventListener();
       return this._cloneElement;

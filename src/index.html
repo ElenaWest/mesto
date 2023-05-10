@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="author" content="Елена Василенко">
     <meta name="description" content="Интерактивная страница с функцией добавления и удаления фотографий, а также возможностью ставить лайки.">
-    <link rel="stylesheet" href="./pages/index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="./images/logo.ico.ico" type="image/x-icon"> 
     <title>Место</title>
@@ -12,11 +11,11 @@
 <body class="page">
     <div class="page__contener">
         <header class="header page__sizing">
-            <img class="header__logo" src="./images/logo.svg" alt="Логотип Место">
-        </header>
+            <img class="header__logo" src="<%=require('./images/logo.svg')%>" alt="Логотип Место">
+        </header> 
         <main class="main">
             <section class="profile page__sizing">
-                <img class="profile__avatar" src="./images/Avatar.jpg" alt="Аватар">
+                <img class="profile__avatar" src="<%=require('./images/Avatar.jpg')%>" alt="Аватар">
                 <div class="profile__info">
                     <h1 class="profile__name">Elena West</h1>
                     <p class="profile__status">Ни дня без подвига</p>
@@ -36,8 +35,8 @@
                 <button class="popup__close" type="button" aria-label="Закрыть"></button>
                 <h2 class="popup__title">Редактировать профиль</h2>
                 <form class="popup__content" name="profile" novalidate>
-                    <input class="popup__input popup__input_user_name" id="name" name="name" type="text" placeholder="Имя пользователя" minlength="2" maxlength="40" required>
-                    <span id="name-error" class="span span_type_error"></span>
+                    <input class="popup__input popup__input_user_name" id="username" name="username" type="text" placeholder="Имя пользователя" minlength="2" maxlength="40" required>
+                    <span id="username-error" class="span span_type_error"></span>
                     <input class="popup__input popup__input_user_status" id="status" name="status" type="text" placeholder="О себе" minlength="2" maxlength="200" required>
                     <span id="status-error" class="span span_type_error"></span>
                     <button class="popup__save-button popup__save-button_profile" type='submit' aria-label="Сохранить">Сохранить</button>
@@ -48,9 +47,9 @@
             <div class="popup__contener">
                 <button class="popup__close" type="button" aria-label="Закрыть"></button>
                 <h2 class="popup__title">Новое место</h2>
-                <form class="popup__content" name="picture" novalidate>
-                    <input class="popup__input popup__input_place_name" id="place" name="place" type="text" placeholder="Название" minlength="2" maxlength="30" required>
-                    <span id="place-error" class="span span_type_error"></span>
+                <form class="popup__content" name="card" novalidate>
+                    <input class="popup__input popup__input_place_name" id="title" name="title" type="text" placeholder="Название" minlength="2" maxlength="30" required>
+                    <span id="title-error" class="span span_type_error"></span>
                     <input class="popup__input popup__input_picture_link" id="link" name="link" type="url" placeholder="Ссылка на картинку" required>
                     <span id="link-error" class="span span_type_error"></span>
                     <button class="popup__save-button popup__save-button_card" type='submit' aria-label="Создать">Создать</button>
@@ -77,9 +76,6 @@
             </li>
         </template>
     </div>
-    <!--<script src="./scripts/validate.js"></script>
-   // <script src="./scripts/cards.js"></script> -->
-    <script type="module" src="./scripts/index.js"></script>
 </body>
 </html>
 
