@@ -4,10 +4,10 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    height: 13px;
+    height: 14px;
     border: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    margin: 13px 36px 0px;
+    margin: 0px 36px 0px;
     padding: 0px 0px 13px;
 }
 .popup__input::placeholder {
@@ -16,6 +16,6 @@
 }
 @media screen and (max-width: 767px) {
     .popup__input {
-        margin: 13px 22px 0px;
+        margin: 0px 22px 0px;
     }
 }

@@ -1,10 +1,10 @@
 //  Карточки "из коробки"
-import VolgogradImage from '../../images/Volgograd.jpg';
-import KazanImage from '../../images/Kazan.jpg';
-import RuskealaImage from '../../images/Ruskeala.jpg';
-import VladivostokImage from '../../images/Vladivostok.jpg';
-import SPBImage from '../../images/SPB.jpg';
-import MoscowImage from '../../images/Moscow.jpg';
+import VolgogradImage from '../images/Volgograd.jpg';
+import KazanImage from '../images/Kazan.jpg';
+import RuskealaImage from '../images/Ruskeala.jpg';
+import VladivostokImage from '../images/Vladivostok.jpg';
+import SPBImage from '../images/SPB.jpg';
+import MoscowImage from '../images/Moscow.jpg';
 
 const initialCards = [
     {

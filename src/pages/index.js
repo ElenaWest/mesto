@@ -1,11 +1,11 @@
 import './index.css';
 //   Импорты
-import Card from '../../src/scripts/components/Card.js';
-import FormValidator from '../../src/scripts/components/FormValidator.js';
-import PopupWithImage from '../../src/scripts/components/PopupWithImage.js';
-import PopupWithForm from '../../src/scripts/components/PopupWithForm.js';
-import Section from '../../src/scripts/components/Section.js';
-import UserInfo from '../../src/scripts/components/UserInfo.js';
+import Card from '../components/Card.js';
+import FormValidator from '../components/FormValidator.js';
+import PopupWithImage from '../components/PopupWithImage.js';
+import PopupWithForm from '../components/PopupWithForm.js';
+import Section from '../components/Section.js';
+import UserInfo from '../components/UserInfo.js';
 import {
   initialCards,
   editButton,
@@ -18,7 +18,7 @@ import {
   info,
   validationConfig,
   formsValidator
-} from '../../src/scripts/utils/constants.js'
+} from '../utils/constants.js'
 
 const userInfo = new UserInfo(info);
 
@@ -36,17 +36,13 @@ const section = new Section({
 section.addCardFromArray()
 
 //  Создание экземпляров формы
-const popupProfile = new PopupWithForm(popupProfileSelector, (evt) => {
-  evt.preventDefault();
-  userInfo.setUserInfo(popupProfile.getInputsValue());
-  popupProfile.close();
-})
+const popupProfile = new PopupWithForm(popupProfileSelector, (values) => {
+  userInfo.setUserInfo(values);
+});
 
-const popupTypePicture = new PopupWithForm(popupPictureSelector, (evt) => {
-  evt.preventDefault();
-  section.addItem(section.renderer(popupTypePicture.getInputsValue()));
-  popupTypePicture.close();
-})
+const popupTypePicture = new PopupWithForm(popupPictureSelector, (values) => {
+  section.addItem(values);
+});
 
 //  Валидация форм
 Array.from(document.forms).forEach(item => {

@@ -5,10 +5,8 @@
     font-size: 12px;
     line-height: 15px;
     margin-left: 36px;
-    padding-top: 5px;
     max-width: 358px;
     word-wrap: break-word;
-    min-height: 12px;
 }
 @media screen and (max-width: 767px) {
     .span_type_error {
