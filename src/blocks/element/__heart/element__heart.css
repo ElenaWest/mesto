@@ -7,9 +7,12 @@
     padding: 0;
     background-color: transparent;
     background-size: contain;
-    margin-top: 5px;
+    
     opacity: 1;
-    transition: opacity linear 0.2s;  
+    transition: opacity linear 0.2s;
+    position: absolute;
+    top: 22px;
+    right: 20px;
 }
 .element__heart:hover {
     opacity: 0.5;

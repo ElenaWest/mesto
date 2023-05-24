@@ -15,10 +15,12 @@
         </header> 
         <main class="main">
             <section class="profile page__sizing">
-                <img class="profile__avatar" src="<%=require('./images/Avatar.jpg')%>" alt="Аватар">
+                <button class="profile__avatar-overlay" type="button">
+                    <img class="profile__avatar" src="#" alt="Аватар">
+                </button>
                 <div class="profile__info">
-                    <h1 class="profile__name">Elena West</h1>
-                    <p class="profile__status">Ни дня без подвига</p>
+                    <h1 class="profile__name"></h1>
+                    <p class="profile__status"></p>
                     <button class="profile__edit-button" type="button" aria-label="Редактировать"></button>
                 </div>
                 <button class="profile__add-button" type="button" aria-label="Добавить"></button>
@@ -39,7 +41,7 @@
                     <span id="username-error" class="span span_type_error"></span>
                     <input class="popup__input popup__input_user_status" id="status" name="status" type="text" placeholder="О себе" minlength="2" maxlength="200" required>
                     <span id="status-error" class="span span_type_error"></span>
-                    <button class="popup__save-button popup__save-button_profile" type='submit' aria-label="Сохранить">Сохранить</button>
+                    <button class="popup__save-button" type='submit' aria-label="Сохранить">Сохранить</button>
                 </form>
             </div>
         </div>
@@ -52,7 +54,7 @@
                     <span id="title-error" class="span span_type_error"></span>
                     <input class="popup__input popup__input_picture_link" id="link" name="link" type="url" placeholder="Ссылка на картинку" required>
                     <span id="link-error" class="span span_type_error"></span>
-                    <button class="popup__save-button popup__save-button_card" type='submit' aria-label="Создать">Создать</button>
+                    <button class="popup__save-button" type='submit' aria-label="Создать">Создать</button>
                 </form>
             </div>
         </div>
@@ -65,6 +67,26 @@
                 </figure>
             </div>
         </div>
+        <div class="popup popup_type_avatar">
+            <div class="popup__contener popup__contener_type_avatar">
+                <button class="popup__close" type="button" aria-label="Закрыть"></button>
+                <h2 class="popup__title">Обновить аватар</h2>
+                <form class="popup__content" name="editAvatar" novalidate>
+                    <input class="popup__input popup__input_avatar" id="avatar" name="avatar" type="url" placeholder="Ссылка на фото" required>
+                    <span id="avatar-error" class="span span_type_error"></span>
+                    <button class="popup__save-button" type="submit" aria-label="Сохранить">Сохранить</button>
+                </form>
+            </div>
+        </div>
+        <div class="popup popup_type_deletecard">
+            <div class="popup__contener popup__contener_type_deletecard">
+                <button class="popup__close" type="button" aria-label="Закрыть"></button>
+                <h2 class="popup__title popup__title_type_deletecard">Вы уверены?</h2>
+                <form class="popup__content" name="deleteCard" novalidate>
+                    <button class="popup__save-button popup__save-button_type_deletecard" type="submit" aria-label="Да">Да</button>
+                </form>
+            </div>
+        </div>
         <template id="cardsTemplate">
             <li class="element">
                 <img class="element__photo" src="#" alt="Увеличенное изображение">
@@ -72,6 +94,7 @@
                 <div class="element__name-group">
                     <h2 class="element__title"></h2>
                     <button class="element__heart" type="button" aria-label="Нравиться"></button>
+                    <p class="element__number"></p>
                 </div>
             </li>
         </template>

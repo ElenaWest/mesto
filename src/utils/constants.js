@@ -1,41 +1,9 @@
-//  Карточки "из коробки"
-import VolgogradImage from '../images/Volgograd.jpg';
-import KazanImage from '../images/Kazan.jpg';
-import RuskealaImage from '../images/Ruskeala.jpg';
-import VladivostokImage from '../images/Vladivostok.jpg';
-import SPBImage from '../images/SPB.jpg';
-import MoscowImage from '../images/Moscow.jpg';
-
-const initialCards = [
-    {
-      title: 'Волгоград',
-      link: VolgogradImage
-    },
-    {
-      title: 'Казань',
-      link: KazanImage
-    },
-    {
-      title: 'Рускеала',
-      link: RuskealaImage
-    },
-    {
-      title: 'Владивосток',
-      link: VladivostokImage
-    },
-    {
-      title: 'Санкт-Петербург',
-      link: SPBImage
-    },
-    {
-      title: 'Москва',
-      link: MoscowImage
-    }
-  ];
-
 //  Кнопки
 const editButton = document.querySelector('.profile__edit-button');
 const addButton = document.querySelector('.profile__add-button');
+
+//  Аватар
+const avatarElement = document.querySelector('.profile__avatar-overlay');
 
 //  Селекторы
 const selectorTemplate = '#cardsTemplate';
@@ -43,10 +11,13 @@ const popupProfileSelector = '.popup_type_profile';
 const popupPictureSelector = '.popup_type_picture';
 const popupImageSelector = '.popup_type_image';
 const elementsListSelector = '.elements__list';
+const popupAvatarSelector = '.popup_type_avatar';
+const popupDeleteSelector = '.popup_type_deletecard';
 
 const info = {
   profileNameSelector: '.profile__name',
-  profileStatusSelector: '.profile__status'
+  profileStatusSelector: '.profile__status',
+  profileAvatar: '.profile__avatar'
 }
 
 const validationConfig = {
@@ -61,14 +32,16 @@ const validationConfig = {
 const formsValidator = {};
 
 export {
-  initialCards,
   editButton,
   addButton,
+  avatarElement,
   selectorTemplate,
   popupProfileSelector,
   popupPictureSelector,
   popupImageSelector,
   elementsListSelector,
+  popupAvatarSelector,
+  popupDeleteSelector,
   info,
   validationConfig,
   formsValidator
