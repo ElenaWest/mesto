@@ -47,8 +47,8 @@ const deletePopupCard = new PopupDeleteCard(popupDeleteSelector, ({ card, cardId
 })
 
 function createNewCard(element) {
-  const card = new Card(element, selectorTemplate, popupImage.open, deletePopupCard.open, (likeElement, cardId) => {
-    if (likeElement.classList.contains('element__heart_active')){
+  const card = new Card(element, selectorTemplate, popupImage.open, deletePopupCard.open, (isLiked, cardId) => {
+    if (isLiked){
       api.deleteLike(cardId)
         .then(res => {
           card.toggleLike(res.likes);
@@ -61,7 +61,6 @@ function createNewCard(element) {
       })
       .catch((error) => console.error(`Ошибка при добавлении лайка ${error}`))
     }
-
   });
     return card.createCards();
 } 
@@ -82,15 +81,15 @@ const popupProfile = new PopupWithForm(popupProfileSelector, (values) => {
 });
 
 const popupTypePicture = new PopupWithForm(popupPictureSelector, (values) => {
-  Promise.all([api.getInfo(), api.addCard(values)])
-  .then(([dataUser, dataCard]) => {
-    dataCard.myid = dataUser._id;
+  api.addCard(values)
+  .then(dataCard => {
+    dataCard.myid = userInfo.getId()
     section.addItemPrepend(createNewCard(dataCard))
     popupTypePicture.close()
   })
   .catch((error) => console.error(`Ошибка при добавлении новой карточки ${error}`))
   .finally(() => popupTypePicture.setupText())
-});
+});  
 
 const popupAvatar = new PopupWithForm(popupAvatarSelector, (values) => {
   api.setNewAvatar(values)
@@ -135,11 +134,12 @@ avatarElement.addEventListener('click', () => {
   popupAvatar.open()
 })
 
-//  Создние промис
+//  Создние начальных данных страницы
 Promise.all([api.getInfo(), api.getCards()])
   .then(([dataUser, dataCard]) => {
     dataCard.forEach(element => element.myid = dataUser._id);
-    userInfo.setUserInfo({ username: dataUser.name, status: dataUser.about, avatar: dataUser.avatar })
-    section.addCardFromArray(dataCard)
+    userInfo.setUserInfo({ username: dataUser.name, status: dataUser.about, avatar: dataUser.avatar });
+    userInfo.setId(dataUser._id);
+    section.renderItems(dataCard);
   })
   .catch((error => console.error(`Ошибка при создании начальных данных страницы ${error}`)))

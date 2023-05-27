@@ -7,6 +7,7 @@ export default class Card {
       this._cardId = item._id;
       this._likes = item.likes;
       this._likesLength = item.likes.length;
+      this._isLiked = false;
       this._handlePreviewImage = handlePreviewImage;
       this._openDeletePopupCard = openDeletePopupCard;
       this._changeColorLike = changeColorLike;
@@ -19,7 +20,7 @@ export default class Card {
     }
     
     _handleLike = () => {
-      this._changeColorLike(this._elementLike, this._cardId)
+      this._changeColorLike(this._isLiked, this._cardId)
     }
   
     _handleTrash = () => {      
@@ -44,6 +45,7 @@ export default class Card {
       this._likes.forEach(element => {
         if (element._id === this._myId) {
           this._elementLike.classList.add('element__heart_active');
+          this._isLiked = true
           return
         }        
       })
@@ -58,6 +60,10 @@ export default class Card {
     removeCard() {
       this._cloneElement.remove();
       this._cloneElement = null;
+    }
+
+    isLiked() {
+      return this._elementLike.classList.contains('element__heart_active');      
     }
   
     createCards() {
